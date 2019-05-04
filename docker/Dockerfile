@@ -10,7 +10,7 @@ RUN curl -sSL https://github.com/gyoisamurai/GyoiThon/raw/master/docker/msf_setu
 #Setup Gyoithon
 RUN git clone https://github.com/gyoisamurai/GyoiThon /opt/gyiothon
 RUN curl -sSL https://github.com/gyoisamurai/GyoiThon/raw/master/docker/msf_setup/meterpreter.rc --output /tmp/meterpreter.rc
-RUN curl -sSL https://github.com/gyoisamurai/GyoiThon/raw/master/docker/gyoithon_setup/config.ini --output /opt/gyiothon/classifier4gyoithon/config.ini
+RUN curl -sSL https://github.com/gyoisamurai/GyoiThon/raw/master/docker/gyoithon_setup/config.ini --output /opt/gyiothon/config.ini
 
 ##Clean up a few things broken in the code due to suboptimal development
 RUN find /opt/gyiothon -name "*.py" -type f | xargs sed -i -e '/OKGREEN + banner + ENDC/d'
